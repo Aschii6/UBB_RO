@@ -1,0 +1,116 @@
+log in ubuntu:
+ssh user@ip urmat de parola
+
+man / whatis
+
+vim: comanda: gg=G indentare automata
+
+ex1.c initial:
+
+  1 #include <malloc.h>
+  2 #include <stdio.h>
+  3
+  4 int main(int argc, char** argv){
+  5     char** c;
+  6     c = (char**) malloc (2* sizeof(char*));
+  7     c[0] = "Hello";
+  8     c[1] = "world";
+  9     c[2] = "!\n";
+ 10     printf('%s', c[0]);
+ 11     return 0;
+ 12 }
+
+merge, dar are probleme
+
+ex1.c corect:
+
+  1 #include <malloc.h>
+  2 #include <stdio.h>
+  3
+  4 int main(int argc, char** argv){
+  5     char** c;
+  6     c = (char**) malloc (3* sizeof(char*));
+  7     c[0] = "Hello";
+  8     c[1] = "world";
+  9     c[2] = "!\n";
+ 10     printf("%s", c[2]); // oricare aici nu conteaza
+ 11     free(c);
+ 12     return 0;
+ 13 }
+
+VALGRIND: valgrind ./ex1
+
+ARGUMENTE IN LINIA DE COMANDA:
+
+ex2.c:
+
+  1 #include <stdio.h>
+  2 #include <stdlib.h>
+  3
+  4 int main(int argc, char** argv){
+  5     int count;
+  6     int sum = 0;
+  7
+  8     printf("Program called with %s \n", argv[0]);
+  9     if (argc > 1)
+ 10         for (count=1; count<argc; count++){
+ 11             printf("argv[%d] = %s\n", count, argv[count]);
+ 12             sum += atoi(argv[count]);
+ 13         }
+ 14     else
+ 15         printf("No other arguments.\n");
+ 16     printf("Sum of numbers is %d.\n", sum);
+ 17     return 0;
+ 18 }
+
+
+./ex2 aaa bbb ccc 20 dd 44 ef 5
+Rezultat:
+
+Program called with ./ex2
+argv[1] = aaa
+argv[2] = bbb
+argv[3] = ccc
+argv[4] = 20
+argv[5] = dd
+argv[6] = 44
+argv[7] = ef
+argv[8] = 5
+Sum of numbers is 69.
+
+
+Matrix from text
+
+vim matrix.txt //editezi si un fisier txt
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char** argv){
+    FILE *fd;
+    fd = fopen("matrix.txt", "r");
+
+    int m, n;
+    int** matrix;
+
+    fscanf(fd, "%d %d", &m, &n);
+
+    matrix = (int**)malloc(m*sizeof(int*));
+    for (int i=0; i<m; i++){
+        matrix[i] = (int*)malloc(n*sizeof(int));
+        for (int j=0; j<n; j++)
+            fscanf(fd, "%d", &matrix[i][j]);
+    }
+    for (int i=0; i<m; i++){
+        for (int j=9; j<n; j++)
+            printf("%3d ", matrix[i][j]);
+        printf("\n");
+}
+
+    for (int i=0; i<m; i++)
+        free(matrix[i]);
+    free(matrix);
+
+    fclose(fd);
+    return 0;
+}
