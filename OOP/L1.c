@@ -2,8 +2,6 @@
 
 // 3.  Determina toate reprezentarile posibile a unui numar natural ca suma
 //   de numere naturale consecutive.
-
-// primeste un natural n si afiseaza posibilitatile de sume de numere consecutive care sunt egale cu n
 void suma_de_numere(int n){
     for (int i=1; i <= n; i++){
         int sum = i;
@@ -27,8 +25,9 @@ int prim(int n){
     return 1;
 }
 
+//5. Tipareste un numar precizat de termeni din sirul
+// 1, 2,1, 3,2,1, 4,2,2, 5,4,3,2,1, 6,2,2,3,3,3, 7,6, ...
 void termeni(int n){
-    // afiseaza primi n termeni din sirul cerut
     int i = 1;
     int elem = 1;
     int parti;
