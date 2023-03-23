@@ -1,0 +1,102 @@
+5.
+Extragem numele din cat/passwd
+cat /etc/passwd | awk -F: '{print $5}'
+
+Folosin cratima ca delimitator ptr tot numele
+cat /etc/passwd | awk -F: '{print $5}' | awk -F- '{print $3}'
+
+Extragem doar numele de familie (spatiu e delimitator implicit)
+cat /etc/passwd | awk -F: '{print $5}' | awk -F- '{print $3}' | awk '{print $1}'
+
+Sau
+cat /etc/passwd | cut -d: -f5
+-d schimba delimitator
+-f campul dat
+
+cat /etc/passwd | cut -d: -f5 | cut -d- -f3
+si inca un pas mai trebuie
+
+-----------------------------------------------------------
+6.Primele 10 cele mai frecvente nume de familie
+
+cat /etc/passwd | awk -F: '{print $5}' | awk -F- '{print $3}' | awk '{print $1}' | sort
+
+cat /etc/passwd | awk -F: '{print $5}' | awk -F- '{print $3}' | awk '{print $1}' | sort | uniq
+
+cat /etc/passwd | awk -F: '{print $5}' | awk -F- '{print $3}' | awk '{print $1}' | sort | uniq -c (apare si nr aparitii)
+
+cat /etc/passwd | awk -F: '{print $5}' | awk -F- '{print $3}' | awk '{print $1}' | sort | uniq -c | sort -n -r (sortate dupa nr aparitii)
+
+cat /etc/passwd | awk -F: '{print $5}' | awk -F- '{print $3}' | awk '{print $1}' | sort | uniq -c | sort -n -r | head -10 (primele 10)
+
+cat /etc/passwd | awk -F: '{print $5}' | awk -F- '{print $3}' | awk '{print $1}' | sort | grep -E "[^ ]"  | uniq -c | sort -n -r | head -10 (scoatem liniile goale cu grep)
+
+-------------------------------------------------------------------
+
+7. Display all the directories under /etc that contain files with the extension .sh. Each directory should be displayed only once. Hide the permission denied errors given by find.
+
+find /etc -type f -name "*.sh"
+
+find /etc -type f -name "*.sh" 2>/dev/null (scapam de erori)
+
+Acum afisam doar numele directorului
+
+(la sed s - substitute)
+
+find /etc -type f -name "*.sh" 2>/dev/null | sed -E "s,/[^/]*$,,"
+
+sau find /etc -type f -name "*.sh" 2>/dev/null | sed -E "s/\/[^\/]*$//"
+
+Final: find /etc -type f -name "*.sh" 2>/dev/null | sed -E "s,/[^/]*$,," | uniq
+
+-------------------------------------------------------------------------
+Procese
+ps (terminal)
+ps -ef (toate de pe server?)
+
+Statistici:
+Nr procese fiecare utilizator:
+ps -ef | awk '{print $1}' | sort | uniq -c
+
+In ordinea nr de procese:
+ps -ef | awk '{print $1}' | sort | uniq -c | sort -n -r
+
+Cautare procese:
+ps -ef | grep -E "(substring nume proces)"
+
+Logarile de pe server: who / pinky (mai multe detalii) / last (logari din ultimele 2 sapt? ceva din trecut)
+
+---------------------------------------------------------------------
+
+Durata totala de logare a utilizatorilor ordonata crescator (ceva pe acolo):
+
+last | awk '{print $1, $10}' (utilizator + durata logari)
+
+durata : (nr zile + ore:minute)
+
+Fortam un (0+ ore:minute) ptr celelalte:
+last | awk '{print $1, $10}' | sed -E "s/\(([0-9][0-9]:)/(0+\1/"
+
+Eliminam din durata "(,),+,:":
+last | awk '{print $1, $10}' | sed -E "s/\(([0-9][0-9]:)/(0+\1/" | sed -E "s/[\(\+:\)]/ /g"
+
+Transformam toata durata in minute, facem un sir cu index numele de utilizator si durata:
+last | awk '{print $1, $10}' | sed -E "s/\(([0-9][0-9]:)/(0+\1/" | sed -E "s/[\(\+:\)]/ /g" | awk '{ arr[$1]+=($2*24*60 + $3*60 + $4) }'
+
+Final:
+last | awk '{print $1, $10}' | sed -E "s/\(([0-9][0-9]:)/(0+\1/" | sed -E "s/[\(\+:\)]/ /g" | awk '{ arr[$1]+=($2*24*60 + $3*60 + $4) } END { for (u in arr) print u, arr[u] }' | sort -k2 -n -r | head -20
+
+sort -k2 sorteaza dupa campul 2 (durata)
+
+------------------------------------------------------------------
+
+Ex selectam numele mic (campul 5) apoi ordonat alfabetic apoi statistica numar de aparitii pe nume. Apoi afisam doar ptr numele mic de la b la m
+
+Pana aici il trunchiaza:
+ cat /etc/passwd | awk -F: '{print $5}' | awk -F. '{print $1}' | sort | uniq -c | awk '{print $2, $1}'
+
+o varianta cu grep -E "^[b-m]"
+Sau: 
+cat /etc/passwd | awk -F: '{print $5}' | awk -F. '{print $1}' | sort | uniq -c | awk '{print $2, $1}' | awk '/^[b-m]/ {print $0}'
+
+cat /etc/passwd | awk -F: '{print $5}' | awk -F. '{print $1}' | sort | uniq -c | awk '{print $2, $1}' | sed -E "s/^[^b-m].*//" | grep -E "[^ ]"
