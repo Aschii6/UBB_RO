@@ -1,1 +1,5 @@
+1. cat last.fake | grep "economica" | grep "Sun" | awk '{print $1}' | sort | uniq
 
+2. cat last.fake | awk '{print $1, $7}' | awk -F: '{print $1}' | awk '{if ($2 >= 23) print $1}' | sort | uniq | head -4
+
+3.
