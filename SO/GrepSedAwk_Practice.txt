@@ -14,4 +14,11 @@
 
 8. cat ps.fake | awk '{print $1}' | grep -E "^[r]" | sort | uniq | sed -E "s/([aeiou])/\1\1/g" | sort | uniq
 
+9. cat passwd.fake | sed -E "s/([a-zA-Z0-9])//g" | sed -E "s/[[:space:]]//g" | sort | uniq
+- daca sunt alte white spaces in afara de space
 
+Altfel ar trebui sa mearga: cat passwd.fake | sed -E "s/([a-zA-Z0-9 ])//g"
+
+10. cat passwd.fake | sed -E "s/([^r])//g" | sort | uniq
+
+11. Momentan: cat ps.fake | awk '{print $2}' | awk 'suma = 0 {suma+=$1} END {print $suma/NF}'
