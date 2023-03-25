@@ -2,4 +2,8 @@
 
 2. cat last.fake | awk '{print $1, $7}' | awk -F: '{print $1}' | awk '{if ($2 >= 23) print $1}' | sort | uniq | head -4
 
-3.
+3. cat passwd.fake | awk -F: '{print $3, $5}' | awk '{if(($1)%7 == 0) print $2, $3}' | grep -E "^[M]"
+
+4. cat ps.fake | grep root | awk '{print $6}' | sort | uniq
+
+5. cat passwd.fake | awk -F: '{print $1, $5}' | grep -E "^[a-z0-9]*88" | awk '{print $2, $3}'
