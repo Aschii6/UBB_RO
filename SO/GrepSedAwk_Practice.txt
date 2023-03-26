@@ -22,3 +22,6 @@ Altfel ar trebui sa mearga: cat passwd.fake | sed -E "s/([a-zA-Z0-9 ])//g"
 10. cat passwd.fake | sed -E "s/([^r])//g" | sort | uniq
 
 11. cat ps.fake | awk 'BEGIN {suma = 0} {suma+=$1} END {print suma/(NR+1)}' aparent
+
+Alte chestii:
+*tabela de translatare: sed -E "y/aeiou/AEIOU/"
