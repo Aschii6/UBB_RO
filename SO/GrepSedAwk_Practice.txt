@@ -25,3 +25,13 @@ Altfel ar trebui sa mearga: cat passwd.fake | sed -E "s/([a-zA-Z0-9 ])//g"
 
 Alte chestii:
 *tabela de translatare: sed -E "y/aeiou/AEIOU/"
+
+grep -w 'text' // display lines containing the text as a whole word
+
+grep -m x // display first x lines that satisfy the condition
+
+grep -v // non matching lines
+
+grep -cx $'\r' // number of empty lines
+
+grep -o // print only matched parts of a matching line
