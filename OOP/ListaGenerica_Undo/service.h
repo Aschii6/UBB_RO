@@ -1,3 +1,5 @@
+#pragma once
+
 typedef struct {
     Lista_cheltuieli *lista;
     Lista_cheltuieli *lista_undo;
