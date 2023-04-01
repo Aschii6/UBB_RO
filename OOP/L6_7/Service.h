@@ -18,14 +18,14 @@ private:
     /**
      * Functie generica de filtrare
      * @param fct functie de filtrare
-     * @return vector<Carte>
+     * @return lista de carti
      */
     vector<Carte> filter(const function<bool(const Carte&)> &fct);
 
     /**
      * Functie generica de sortare
      * @param fct functie de comparare
-     * @return vector<Carte>
+     * @return lista de carti
      */
     vector<Carte> sort(const function<bool(const Carte&, const Carte&)> &fct);
 public:
@@ -53,7 +53,7 @@ public:
 
     /**
      * Returneaza toate cartile din service
-     * @return vector<Carte>
+     * @return lista de carti
      */
     const vector<Carte>& getAllService();
 
@@ -84,32 +84,32 @@ public:
     /**
      * Filtrare dupa titlu
      * @param titlu
-     * @return vector<Carte>
+     * @return lista de carti
      */
     vector<Carte> filterByTitlu(const string &titlu);
 
     /**
      * Filtrare dupa anul aparitiei
      * @param anAparitie
-     * @return vector<Carte>
+     * @return lista de carti
      */
     vector<Carte> filterByAnAparitie(int anAparitie);
 
     /**
      * Sortare dupa titlu
-     * @return vector<Carte>
+     * @return lista de carti
      */
     vector<Carte> sortByTitlu();
 
     /**
      * Sortare dupa autor
-     * @return vector<Carte>
+     * @return lista de carti
      */
     vector<Carte> sortByAutor();
 
     /**
      * Sortare dupa an aparitie si gen
-     * @return vector<Carte>
+     * @return lista de carti
      */
     vector<Carte> sortByAnSiGen();
 
