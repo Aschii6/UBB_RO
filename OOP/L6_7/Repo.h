@@ -49,7 +49,7 @@ public:
 
     /**
      * Returneaza toate cartile din repo
-     * @return vector<Carte>
+     * @return lista de carti
      */
     vector<Carte>& getAll();
 
