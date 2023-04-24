@@ -1,1 +1,12 @@
+*Numarul de linii dintr-un fisier fara lini goale
+
+nr_lines=$(grep -E -c -v "^[ \t]*$" "$1/$f")
+
+if echo $arg | grep -E -q "^[0-9]+$"; then
+    echo "$arg is an integer number
+fi
+
+*De cate ori apare cuvantul word in fisierul file
+
+count=$(grep -E -o "\<$word\>" "$file" | wc -l)
 
