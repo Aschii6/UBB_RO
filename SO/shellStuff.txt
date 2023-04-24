@@ -2,6 +2,10 @@
 
 nr_lines=$(grep -E -c -v "^[ \t]*$" "$1/$f")
 
+Si cu linii goale
+
+nr_lines=`wc -l $elem | awk 'END{print $1}'`
+
 if echo $arg | grep -E -q "^[0-9]+$"; then
     echo "$arg is an integer number
 fi
