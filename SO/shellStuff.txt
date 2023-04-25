@@ -54,3 +54,12 @@ IFS='\n'
 for line in `cat df.fake`; do
         echo $line
 done
+
+*General sort of input
+
+read line
+
+while [ $line != "stop" ]; do
+        echo $line
+        read line
+done | sort
