@@ -35,6 +35,10 @@ if echo $arg | grep -E -q "^[0-9]+$"; then
     #este numar
 fi
 
+*Insert continut dupa finalul linii nr, dar nu pe rand nou
+
+sed -i '$[nr]s/$/ end_text/' myfile.txt
+
 *Scrieti un script bash care sorteaza fisierele date ca argumente la linia de comanda in ordinea crescatoare a dimensiunii lor in octeti.
 
 #!/bin/bash
@@ -63,3 +67,7 @@ while [ $line != "stop" ]; do
         echo $line
         read line
 done | sort
+
+*First line of a file
+
+line=`cat $fisier | head -1`
