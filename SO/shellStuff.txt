@@ -1,6 +1,9 @@
 *Numarul de linii dintr-un fisier fara lini goale
 
-nr_lines=$(grep -E -c -v "^[ \t]*$" "$1/$f")
+$1-directory
+nr_lines=$(grep -E -c -v "^[ \t]*$" "$1/$file")
+
+sau nr_lines=$(grep -E -c -v "^[ \t]*$" "$file") depinde de path
 
 Si cu linii goale
 
