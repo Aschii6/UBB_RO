@@ -44,3 +44,13 @@ for f in $@; do
   fi
 done | sort -n
 
+*Parcurgere linie cu linie printr-un fisier
+
+while read -r line; do COMMAND; done < input.file
+
+sau
+IFS='\n'
+
+for line in `cat df.fake`; do
+        echo $line
+done
