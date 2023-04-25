@@ -17,3 +17,14 @@ fi
 
 count=$(grep -E -o "\<$word\>" "$file" | wc -l)
 
+*Toate fisierele dintr-un director fara a intra in subdirectoare
+
+ls "$1" | grep -E "ceva"
+
+*Toate fisierele dintr-un director recursiv
+
+find "$1" -type f | grep -E "altceva"
+
+*Expl. toate c files dintr-un director recursiv
+
+files=`find "$1" -type f | grep -E "\.c$"`
