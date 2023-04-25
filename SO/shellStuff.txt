@@ -28,3 +28,19 @@ find "$1" -type f | grep -E "altceva"
 *Expl. toate c files dintr-un director recursiv
 
 files=`find "$1" -type f | grep -E "\.c$"`
+
+*Vf daca ceva dat este numar
+
+if echo $arg | grep -E -q "^[0-9]+$"; then
+    #este numar
+fi
+
+*Scrieti un script bash care sorteaza fisierele date ca argumente la linia de comanda in ordinea crescatoare a dimensiunii lor in octeti.
+
+#!/bin/bash
+for f in $@; do
+  if test -f $f; then
+    du -b $f
+  fi
+done | sort -n
+
