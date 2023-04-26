@@ -71,3 +71,9 @@ done | sort
 *First line of a file
 
 line=`cat $fisier | head -1`
+
+*Dimensiunea unui fisier
+
+wc -c 'path_fisier' | awk '{print $1}'
+
+sau du -b 'path_fisier' | awk '{print $1}'
