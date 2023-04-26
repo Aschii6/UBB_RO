@@ -35,6 +35,11 @@ if echo $arg | grep -E -q "^[0-9]+$"; then
     #este numar
 fi
 
+sau
+if [ $argument -eq $argument ] 2>/dev/null ; then
+    echo "$argument" >> temp.txt
+fi
+
 *Insert continut dupa finalul linii nr, dar nu pe rand nou
 
 sed -i '$[nr]s/$/ end_text/' myfile.txt
