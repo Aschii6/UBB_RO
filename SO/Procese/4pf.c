@@ -4,6 +4,13 @@
 #include <sys/wait.h>
 #include <string.h>
 
+/*
+Write a program that creates a child process. The two communicate through a pipe. The parent reads a string 
+with >25 characters and sends it to the child, which removes 1 vowel and sends it to the parent, 
+which removes the first and the last character and sends it to the child back which removes again a vowel 
+and sends it back .... and so on untill the string contains 3 or less characters.
+*/
+
 int main(){
 	char str[51];
 	printf("Dati string\n");
