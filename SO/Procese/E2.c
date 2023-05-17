@@ -3,6 +3,10 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+/*
+Program primeste ca argumente perechi de numere si stringuri, le trimite spre un alt program cu exec, daca nr de vocale ale stringului = nr dat atunci il afiseaza
+*/
+
 int main(int argc, char* argv[]){
 	if(argc < 3 || argc%2==0){
 		perror("Bad arguments\n");
