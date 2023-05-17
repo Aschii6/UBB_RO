@@ -6,6 +6,12 @@
 #include <stdio.h>
 #include <fcntl.h>
 
+/*
+Implement a program that creates 2 child processes A and B, which communicate using FIFO.
+Process A sends to process B a number 70>n>10; process B receives this number, subtracts 4 and sends it to process A;
+process A reads the number from B, decreases the number by 1 and sends it to B... and so on, until the number n has 1 digit.
+*/
+
 int main(int argc, char* argv[]){
 	mkfifo ("/tmp/fifoa2b", 0666);
 	mkfifo ("/tmp/fifob2a", 0666);
