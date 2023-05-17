@@ -5,6 +5,10 @@
 #include <unistd.h>
 #include <time.h>
 
+/*
+Process creates child and grandchild. Isi trimit back and forth un numar modificand din el si se opresc cand e mai mic decat 5
+*/
+
 int main(int argc, char* argv[]){
 	int c2g[2],g2c[2];
 	pipe(c2g);
