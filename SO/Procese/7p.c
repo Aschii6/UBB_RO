@@ -3,6 +3,12 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+/*
+Write a program that receives as arguments 2 numbers and a filename and prints in the file the lowest common multiple of the two numbers. 
+This program is called by a C program which reads a string of natural
+numbers and prints the lowest common multiple of all. Use the exit status.
+*/
+
 int main(){
 	int nr[51];
 	int tmp;
