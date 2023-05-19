@@ -1,0 +1,26 @@
+int i = hashFunction(c);
+    TValoare old = NULL_TVALOARE;
+
+    while (i != -1){
+        if (elems[i].first == c){
+            old = elems[i].second;
+            elems[i] = make_pair(-1, NULL_TVALOARE);
+            dimensiune--;
+            break;
+        }
+        i = urm[i];
+    }
+
+    if (i == -1)
+        return NULL_TVALOARE;
+
+    int j;
+    while (i != -1){
+        elems[i] = elems[urm[i]];
+        j = i;
+        i = urm[i];
+    }
+    elems[j] = make_pair(-1, NULL_TVALOARE);
+
+    return old;
+}
