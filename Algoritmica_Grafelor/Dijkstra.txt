@@ -1,0 +1,32 @@
+struct myComp {
+    constexpr bool operator()(
+            pair<int, int> const& a,
+            pair<int, int> const& b)
+    const noexcept
+    {
+        return a.second > b.second;
+    }
+};
+
+void Dijkstra(vector<int>& drumuriCostMinim, vector<vector<pair<int,int>>>& listaAdj, int nrVarfuri, int nodSursa){
+
+    drumuriCostMinim[nodSursa] = 0;
+    priority_queue<pair<int,int>, vector<pair<int,int>>, myComp> pq;
+    vector<bool> vizitat(nrVarfuri, false);
+
+    pq.push({nodSursa, 0});
+
+    while (!pq.empty()){
+        int varf = pq.top().first;
+        pq.pop();
+        if (vizitat[varf])
+            continue;
+        vizitat[varf] = true;
+        for (auto& vecin : listaAdj[varf]){
+            if (drumuriCostMinim[vecin.first] > drumuriCostMinim[varf] + vecin.second){
+                drumuriCostMinim[vecin.first] = drumuriCostMinim[varf] + vecin.second;
+                pq.push({vecin.first, drumuriCostMinim[vecin.first]});
+            }
+        }
+    }
+}

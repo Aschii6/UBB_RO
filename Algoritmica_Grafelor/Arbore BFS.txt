@@ -1,0 +1,48 @@
+void ex4(){
+    ifstream f("graf.txt");
+    int nr;
+    f >> nr;
+    vector<vector<int>> listaAdj (nr + 1);
+    int a, b;
+    while (f >> a){
+        f >> b;
+        listaAdj[a].push_back(b);
+    }
+    f.close();
+
+    cout << "Ex4; Varful sursa:";
+    int vs;
+    cin >> vs;
+
+    int culoare[31] = {0}, distanta[31] = {0}, parinte[31] = {0};
+
+    for (int i = 1; i <= nr; i++){
+        if (i == vs)
+            continue;
+        distanta[i] = Inf;
+        parinte[i] = 0;
+        culoare[i] = 0; // alb
+    }
+    culoare[vs] = 1; // gri
+    distanta[vs] = 0;
+    parinte[vs] = 0;
+
+    cout << "Arbore BFS:\n";
+    vector<int> coada;
+    coada.push_back(vs);
+    while (!coada.empty()){
+        int u = coada[0];
+         cout << "Vizitat: " << u << " Parinte: " << parinte[u] << " Adancime: " << distanta[u] <<'\n';
+        coada.erase(coada.begin());
+        for (int i = 0; i < listaAdj[u].size(); i++){
+            int v = listaAdj[u][i];
+            if (culoare[v] == 0){
+                culoare[v] = 1;
+                distanta[v] = distanta[u] + 1;
+                parinte[v] = u;
+                coada.push_back(v);
+            }
+        }
+        culoare[u] = 2; // negru
+    }
+}

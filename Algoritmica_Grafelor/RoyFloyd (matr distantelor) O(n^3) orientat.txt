@@ -1,0 +1,26 @@
+void Matricea_Distantelor(int n, int matr_adj[21][21]){
+    float Inf = numeric_limits<float>::infinity();
+    float matr_dist[21][21];
+
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++)
+            if (matr_adj[i][j] == 1 && i != j)
+                matr_dist[i][j] = 1;
+            else
+                matr_dist[i][j] = Inf;
+
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++)
+            for (int k = 1; k <= n; k++)
+                if (i != j)
+                    matr_dist[i][j] = min(matr_dist[i][j], matr_dist[i][k] + matr_dist[k][j]);
+                else
+                    matr_dist[i][j] = 0;
+
+    cout << "Matricea distantelor:\n";
+    for (int i = 1; i <= n; i++){
+        for (int j = 1; j <= n; j++)
+            cout << matr_dist[i][j] << ' ';
+        cout << '\n';
+    }
+}

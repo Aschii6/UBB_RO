@@ -1,0 +1,16 @@
+bool BellmanFord(const vector<vector<pair<int,int>>>& listaAdj, vector<int>& distante, int nrVarfuri, int nodSursa){
+    distante[nodSursa] = 0;
+
+    for (int i = 0; i < nrVarfuri - 1; ++i)
+        for (int j = 0; j < nrVarfuri; ++j)
+            for (auto& vecin : listaAdj[j])
+                if (distante[vecin.first] > distante[j] + vecin.second){
+                    distante[vecin.first] = distante[j] + vecin.second;
+                }
+
+    for (int i = 0; i < nrVarfuri; ++i)
+        for (auto& vecin : listaAdj[i])
+            if (distante[vecin.first] > distante[i] + vecin.second)
+                return false;
+    return true;
+}

@@ -1,0 +1,56 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+
+int main(int argc, char* argv[]){
+    if (argc < 3) {
+        cout << "Parametrii in linia de comanda insuficienti\n";
+        return 0;
+    }
+
+    ifstream f(argv[1]);
+    if (!f) {
+        cout << "Fisierele nu au fost gasite\n";
+        return 0;
+    }
+    ofstream g(argv[2]);
+
+    int nr;
+    f >> nr;
+
+    vector<int> codarePrufer(nr);
+    vector<int> arbore(nr + 1, -1);
+
+    for (int i = 0; i < nr; ++i){
+        f >> codarePrufer[i];
+    }
+
+    int nrMuchii = nr + 2;
+    vector<int> muchii(nrMuchii, 0);
+
+    for (int i = 0; i < nr; ++i)
+        muchii[codarePrufer[i]]++;
+
+    int frunzaMinima = 0;
+    for (int i = 0; i < nr; ++i){
+        for (frunzaMinima = 0; frunzaMinima < nrMuchii; ++frunzaMinima){
+            if (muchii[frunzaMinima] == 0) {
+                muchii[frunzaMinima]--;
+                arbore[frunzaMinima] = codarePrufer[i];
+
+                muchii[codarePrufer[i]]--;
+                break;
+            }
+        }
+    }
+
+    g << nr + 1 << '\n';
+    for (auto i : arbore){
+        g << i << ' ';
+    }
+
+    f.close();
+    g.close();
+}

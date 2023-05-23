@@ -1,0 +1,130 @@
+#include <iostream>
+#include <fstream>
+#include <utility>
+#include <vector>
+#include <algorithm>
+#include <queue>
+#include <map>
+
+using namespace std;
+
+class Nod{
+public:
+    char ch;
+    int frecventa;
+    Nod* stanga;
+    Nod* dreapta;
+
+    Nod(char ch, int frecventa){
+        this->ch = ch;
+        this->frecventa = frecventa;
+        this->stanga = nullptr;
+        this->dreapta = nullptr;
+    }
+};
+
+void creeazaCod(Nod* nod, string cod, vector<pair<char, string>>& coduri){
+    if (nod->stanga == nullptr && nod->dreapta == nullptr){
+        coduri.emplace_back(nod->ch, cod);
+        return;
+    }
+
+    creeazaCod(nod->stanga, cod + '0', coduri);
+    creeazaCod(nod->dreapta, cod + '1', coduri);
+}
+
+char findSmallest(Nod* nod){
+    if (nod->stanga == nullptr && nod->dreapta == nullptr){
+        return nod->ch;
+    }
+
+    char stanga = findSmallest(nod->stanga);
+    char dreapta = findSmallest(nod->dreapta);
+
+    if (stanga < dreapta)
+        return stanga;
+    return dreapta;
+}
+
+int main(int argc, char* argv[]){
+    if (argc < 3) {
+        cout << "Parametrii in linia de comanda insuficienti\n";
+        return 0;
+    }
+
+    ifstream f(argv[1]);
+    if (!f) {
+        cout << "Fisierele nu au fost gasite\n";
+        return 0;
+    }
+    ofstream g(argv[2]);
+
+    vector<pair<char, int>> frecventaLitere;
+    char c;
+    string mesaj;
+    while (f >> noskipws >> c){
+        mesaj += c;
+        auto it = find_if(frecventaLitere.begin(), frecventaLitere.end(), [c](pair<char, int> a){
+            return a.first == c;
+        });
+        if (it != frecventaLitere.end()){
+            it->second++;
+        }
+        else{
+            frecventaLitere.emplace_back(c, 1);
+        }
+    }
+
+    int nr = frecventaLitere.size();
+
+    priority_queue<Nod*, vector<Nod*>, function<bool(Nod*, Nod*)>> pq([](Nod* a, Nod* b){
+        if (a->frecventa == b->frecventa)
+            return findSmallest(a) > findSmallest(b);
+        return a->frecventa > b->frecventa;
+    });
+
+    for (auto i : frecventaLitere){
+        Nod* nod = new Nod(i.first, i.second);
+        pq.push(nod);
+    }
+
+    for (int i = 0; i < nr - 1; ++i){
+        Nod* stanga = pq.top();
+        pq.pop();
+        Nod* dreapta = pq.top();
+        pq.pop();
+
+//        Nod* z = new Nod(stanga->ch + dreapta->ch, stanga->frecventa + dreapta->frecventa);
+        Nod* z = new Nod('#', stanga->frecventa + dreapta->frecventa);
+        z->stanga = stanga;
+        z->dreapta = dreapta;
+        pq.push(z);
+    }
+    Nod* radacina = pq.top();
+    pq.pop();
+
+    vector<pair<char, string>> coduri;
+    creeazaCod(radacina, "", coduri);
+
+    map<char, string> coduriMap;
+    for (const auto& i : coduri){
+        coduriMap[i.first] = i.second;
+    }
+
+    sort(frecventaLitere.begin(),frecventaLitere.end(), [](pair<char, int> a, pair<char, int> b){
+        return a.first < b.first;
+    });
+
+    g << nr << '\n';
+    for (auto i : frecventaLitere){
+        g << i.first << ' ' << i.second << '\n';
+    }
+
+    for (auto i : mesaj){
+        g << coduriMap[i];
+    }
+
+    f.close();
+    g.close();
+    return 0;
+}

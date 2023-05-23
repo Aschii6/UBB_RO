@@ -1,0 +1,65 @@
+int minKey(vector<int> key, vector<bool> inMST){
+    int min = INT_MAX, min_index;
+
+    for (int v = 0; v < key.size(); ++v){
+        if (!inMST[v] && key[v] < min){
+            min = key[v];
+            min_index = v;
+        }
+    }
+    return min_index;
+}
+
+int main(int argc, char** argv) {
+    if (argc < 3) {
+        cout << "Parametrii in linia de comanda insuficienti\n";
+        return 0;
+    }
+
+    ifstream f(argv[1]);
+    if (!f) {
+        cout << "Fisierele nu au fost gasite\n";
+        return 0;
+    }
+    ofstream g(argv[2]);
+
+    int nrNoduri, nrMuchii;
+    vector<vector<int>> matriceAdiacenta;
+
+    f >> nrNoduri >> nrMuchii;
+    matriceAdiacenta.resize(nrNoduri, vector<int>(nrNoduri, 0));
+
+    for (int i = 0; i < nrMuchii; ++i){
+        int x, y, cost;
+        f >> x >> y >> cost;
+        matriceAdiacenta[x][y] = cost;
+        matriceAdiacenta[y][x] = cost;
+    }
+
+
+    vector<int> parent(nrNoduri, -1), key(nrNoduri, INT_MAX);
+    vector<bool> inMST(nrNoduri, false);
+
+    int root = 0;
+    key[root] = 0;
+    parent[root] = -1;
+
+    for (int index = 0; index < nrNoduri; ++index){
+        int k = minKey(key, inMST);
+        inMST[k] = true;
+        for (int v = 0; v < nrNoduri; ++v) {
+            if (matriceAdiacenta[k][v] && !inMST[v] && matriceAdiacenta[k][v] < key[v]){
+                parent[v] = k;
+                key[v] = matriceAdiacenta[k][v];
+            }
+        }
+    }
+
+    g << nrNoduri - 1 << '\n';
+    for (int i = 1; i < nrNoduri; ++i){
+        g << parent[i] << ' ' << i << '\n';
+    }
+
+    f.close();
+    g.close();
+}

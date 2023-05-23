@@ -1,0 +1,38 @@
+void Moore(int lungime_drum[31], int parinte[31], int s, int nr, int matr_adj[31][31]){
+    vector<int> coada;
+    lungime_drum[s] = 0;
+    for (int i = 1; i <= nr; i++)
+        if (i != s)
+            lungime_drum[i] = Inf;
+    coada.push_back(s);
+    while (!coada.empty()){
+        int u = coada[0];
+        coada.erase(coada.begin());
+        for (int i = 1; i <= nr; i++)
+            if (matr_adj[u][i] == 1 && lungime_drum[i] == Inf){
+                lungime_drum[i] = lungime_drum[u] + 1;
+                parinte[i] = u;
+                coada.push_back(i);
+            }
+    }
+}
+
+void DrumuriMoore(int lungime_drum[31], int parinte[31], int nr){
+    vector<int> drumuri(nr+1);
+
+    for (int i = 1; i <= nr; i++){
+        if (lungime_drum[i] == Inf || lungime_drum[i] == 0)
+            continue;
+        int k = lungime_drum[i];
+        drumuri[k] = i;
+        while (k!=0){
+            drumuri[k-1] = parinte[drumuri[k]];
+            k--;
+        }
+        cout << "Drumul dintre " << drumuri[0] << " si " << drumuri[lungime_drum[i]] << " este: ";
+        for (int j = 0; j <= lungime_drum[i]; j++)
+            cout << drumuri[j] << " ";
+        cout << '\n';
+        drumuri.clear();
+    }
+}

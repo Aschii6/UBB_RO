@@ -1,0 +1,59 @@
+int findFrunzaMinima(const vector<int>& arbore) {
+    unordered_set<int> nodes;
+    for (int j : arbore) {
+        nodes.insert(j);
+    }
+
+    for (int i = 0; i < arbore.size(); ++i) {
+        if (arbore[i] != -1 && arbore[i] != -2 && nodes.find(i) == nodes.end()) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main(int argc, char** argv) {
+    if (argc < 3) {
+        cout << "Parametrii in linia de comanda insuficienti\n";
+        return 0;
+    }
+
+    ifstream f(argv[1]);
+    if (!f) {
+        cout << "Fisierele nu au fost gasite\n";
+        return 0;
+    }
+    ofstream g(argv[2]);
+
+    int nrNoduri;
+    vector<int> arbore;
+
+    f >> nrNoduri;
+    arbore.reserve(nrNoduri);
+    int tmp;
+    for (int i = 0; i < nrNoduri; ++i) {
+        f >> tmp;
+        arbore.push_back(tmp);
+    }
+
+    // Codare Prufer
+
+    vector<int> codarePrufer;
+    while (true){
+        int frunzaMinima = findFrunzaMinima(arbore);
+        if (frunzaMinima == -1)
+            break;
+        codarePrufer.push_back(arbore[frunzaMinima]);
+        arbore[frunzaMinima] = -2;
+    }
+
+    g << codarePrufer.size() << '\n';
+    for (int i : codarePrufer){
+        cout << i << " ";
+        g << i << " ";
+    }
+
+    f.close();
+    g.close();
+    return 0;
+}
