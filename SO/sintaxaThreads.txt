@@ -1,1 +1,49 @@
+pthread_t tid1;
+pthread_create(&tid1,NULL,thread1,NULL);
+// sau pthread_create(&tid1,NULL,thread1,param); // param - void* sau pointer normal ig
+pthread_join(tid1,NULL);
 
+pthread_mutex_t mtx;
++ in main
+pthread_mutex_init(&mtx, NULL);
+pthread_mutex_destroy(&mtx);
+
+// sau pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
+
+pthread_mutex_lock(&mtx);
+pthread_mutex_unlock(&mtx);
+
+
+#include <semaphore.h>
+sem_t sem;
++ in main
+sem_init(&sem, 0, nr);
+sem_destroy(&sem);
+
+sem_wait(&sem); // --
+sem_post(&sem); // ++
+
+
+pthread_rwlock_t rwl;
++ in main
+pthread_rwlock_init(&rwl, NULL);
+pthread_rwlock_destroy(&rwl);
+
+pthread_rwlock_rdlock(&rwl);
+pthread_rwlock_wrlock(&rwl);
+pthread_rwlock_unlock(&rwl);
+
+
+pthread_barrier_t barr;
++ in main
+pthread_barrier_init(&barr, NULL, nr);
+pthread_barrier_destroy(&barr);
+
+pthread_barrier_wait(&barr);
+
+
+pthread_cond_t cv = PTHREAD_COND_INITIALIZER;
+
+pthread_cond_wait(&cv, &mtx); // un mutex
+pthread_cond_signal(&cv);
+pthread_cond_broadcast(&cv);
