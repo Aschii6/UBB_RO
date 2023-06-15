@@ -1,0 +1,26 @@
+void Euler(vector<vector<int>>& listaAdiacenta, vector<int>& drum){
+
+    stack<int> nodes;
+    nodes.push(0);
+
+    while (!nodes.empty()) {
+        int current = nodes.top();
+
+        if (!listaAdiacenta[current].empty()) {
+            int next = listaAdiacenta[current].front();
+            listaAdiacenta[current].erase(listaAdiacenta[current].begin());
+
+            for (int i = 0; i < listaAdiacenta[next].size(); ++i) {
+                if (listaAdiacenta[next][i] == current) {
+                    listaAdiacenta[next].erase(listaAdiacenta[next].begin() + i);
+                    break;
+                }
+            }
+
+            nodes.push(next);
+        } else {
+            drum.push_back(current);
+            nodes.pop();
+        }
+    }
+}
