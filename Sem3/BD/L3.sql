@@ -24,7 +24,7 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE adaugaConstrangereValoareImplicitarUndo
+CREATE PROCEDURE adaugaConstrangereValoareImplicitaUndo
 AS
 BEGIN
 	ALTER TABLE Ingrijitor
