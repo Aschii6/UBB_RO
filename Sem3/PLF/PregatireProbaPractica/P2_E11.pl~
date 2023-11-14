@@ -1,0 +1,24 @@
+% prim(E: integer)
+prim(1):-!.
+
+prim(2):-!.
+
+prim(E):-
+    prim_aux(E, 2).
+
+prim_aux(E, D):-
+    E is D + 1,!.
+
+prim_aux(E, D):-
+    E mod D =\= 0,
+    D1 is D + 1,
+    prim_aux(E, D1).
+
+dublarePrime([], []).
+
+dublarePrime([H | T], [H, H | R]):-
+    prim(H),!,
+    dublarePrime(T, R).
+
+dublarePrime([_ | T], R):-
+    dublarePrime(T, R).
