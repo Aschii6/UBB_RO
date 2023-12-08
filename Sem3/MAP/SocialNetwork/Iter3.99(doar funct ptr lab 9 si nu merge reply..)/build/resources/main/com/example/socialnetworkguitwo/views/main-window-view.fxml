@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkguitwo.controllers.MainWindowController">
+   <children>
+      <TableView fx:id="userTableView" layoutX="270.0" layoutY="20.0" prefHeight="360.0" prefWidth="310.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+          <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="firstName" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="lastName" />
+            <TableColumn fx:id="tagColumn" prefWidth="100.0" text="tag" />
+        </columns>
+      </TableView>
+      <Button layoutX="20.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="40.0"
+              prefWidth="70.0" text="Login">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
