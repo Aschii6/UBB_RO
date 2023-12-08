@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sem7.controllers.MoviesController">
+   <children>
+      <TableView fx:id="movieTableView" layoutX="286.0" layoutY="10.0" prefHeight="319.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="idMovie" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="titleMovie" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="directorMovie" prefWidth="75.0" text="Director" />
+            <TableColumn fx:id="yearMovie" prefWidth="75.0" text="Year" />
+        </columns>
+      </TableView>
+      <Button layoutX="213.0" layoutY="342.0" mnemonicParsing="false" onAction="#onPressDelete" text="Delete" />
+      <Button layoutX="14.0" layoutY="342.0" mnemonicParsing="false" onAction="#onPressAdd" text="Add" />
+      <TextField fx:id="titleField" layoutX="14.0" layoutY="14.0" />
+      <TextField fx:id="directorField" layoutX="15.0" layoutY="47.0" />
+      <TextField fx:id="yearField" layoutX="16.0" layoutY="81.0" />
+      <Label layoutX="199.0" layoutY="18.0" text="Title" />
+      <Label layoutX="189.0" layoutY="51.0" text="Director" />
+      <Label layoutX="199.0" layoutY="85.0" text="Year" />
+      <Button fx:id="prevButton" layoutX="286.0" layoutY="342.0" mnemonicParsing="false" onAction="#onPressPrev" text="Previous" />
+      <Button fx:id="nextButton" layoutX="534.0" layoutY="342.0" mnemonicParsing="false" onAction="#onPressNext" text="Next" />
+      <ComboBox fx:id="filterYearComboBox" layoutX="13.0" layoutY="144.0" prefWidth="150.0" promptText="Year" />
+      <TextField fx:id="filterTitleTextField" layoutX="15.0" layoutY="188.0" promptText="Title" />
+      <TextField fx:id="filterDirectorTextField" layoutX="15.0" layoutY="225.0" promptText="Director" />
+      <Label fx:id="pageNumberLabel" layoutX="412.0" layoutY="346.0" text="Page 0/0" />
+   </children>
+</AnchorPane>
