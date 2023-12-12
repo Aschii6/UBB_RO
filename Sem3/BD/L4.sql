@@ -72,7 +72,7 @@ INSERT INTO Views VALUES ('vwZona'), ('vwCusca'), ('vwRespIngrijire')
 
 SELECT * FROM Views
 
--- Proceduri Insert Delete
+-- Proceduri Insert
 GO
 CREATE OR ALTER PROCEDURE InsertZona (@rows INT)
 AS
@@ -97,7 +97,6 @@ GO
 CREATE OR ALTER PROCEDURE InsertCusca (@rows INT)
 AS
 BEGIN
-	-- EXEC DeleteCusca @rows
 	DECLARE @i INT = 1
 	DECLARE @cod_zona INT
 	DECLARE @mediu VARCHAR(50)
@@ -145,7 +144,7 @@ BEGIN
 	DEALLOCATE cursorCusca
 END
 
--- Tests - informatii configurari de testare
+-- Tests
 INSERT INTO Tests (Name) VALUES ('Test cu 5000 pe toate')
 
 SELECT * FROM Tests
