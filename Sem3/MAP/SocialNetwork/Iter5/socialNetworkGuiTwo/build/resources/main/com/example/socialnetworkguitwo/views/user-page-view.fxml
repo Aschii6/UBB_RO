@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkguitwo.controllers.UserPageController">
+   <children>
+      <Separator layoutX="397.0" orientation="VERTICAL" prefHeight="600.0" />
+      <Separator layoutY="298.0" prefWidth="750.0" />
+      <TableView fx:id="friendReqsTableView" layoutX="415.0" layoutY="325.0" prefHeight="190.0" prefWidth="320.0">
+        <columns>
+          <TableColumn fx:id="firstNameColumn1" prefWidth="95.0" text="firstName" />
+          <TableColumn fx:id="lastNameColumn1" prefWidth="95.0" text="lastName" />
+            <TableColumn fx:id="tagColumn1" prefWidth="130.0" text="tag" />
+        </columns>
+      </TableView>
+      <Label layoutX="511.0" layoutY="300.0" text="Friend Requests">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="friendsTableView" layoutX="415.0" layoutY="45.0" prefHeight="210.0" prefWidth="320.0">
+        <columns>
+            <TableColumn fx:id="firstNameColumn2" prefWidth="95.0" text="firstName" />
+            <TableColumn fx:id="lastNameColumn2" prefWidth="95.0" text="lastName" />
+            <TableColumn fx:id="tagColumn2" prefWidth="130.0" text="tag" />
+        </columns>
+      </TableView>
+      <Label layoutX="546.0" layoutY="14.0" text="Friends">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="chatListView" layoutX="15.0" layoutY="45.0" prefHeight="210.0" prefWidth="369.0" />
+      <Label layoutX="157.0" layoutY="14.0" text="Open Chat">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tagTextField" layoutX="15.0" layoutY="325.0" promptText="Tag">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="messageTextField" layoutX="15.0" layoutY="375.0" promptText="Message">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Button layoutX="243.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleSendMessage" text="Send Message">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="239.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleSendFriendReq" text="Send friend req">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="414.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleAcceptFriendReq" text="Accept" />
+      <Button layoutX="690.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleDenyFriendReq" text="Deny" />
+      <TextField fx:id="pageSizeTextField" layoutX="15.0" layoutY="425.0" promptText="Change Page Size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="277.0" layoutY="425.0" onAction="#handleSetPageNumber" mnemonicParsing="false" text="Set">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="prevButton2" onAction="#handlePressPrev2" layoutX="415.0" layoutY="265.0" mnemonicParsing="false" text="Prev" />
+      <Button fx:id="nextButton2" onAction="#handlePressNext2" layoutX="691.0" layoutY="265.0" mnemonicParsing="false" text="Next" />
+      <Button fx:id="prevButton1" onAction="#handlePressPrev1" layoutX="415.0" layoutY="525.0" mnemonicParsing="false" text="Prev" />
+      <Button fx:id="nextButton1" onAction="#handlePressNext1" layoutX="691.0" layoutY="525.0" mnemonicParsing="false" text="Next" />
+      <Label fx:id="pageNumberLabel2" layoutX="558.0" layoutY="268.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pageNumberLabel1" layoutX="559.0" layoutY="541.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageSelectedLabel" layoutX="15.0" layoutY="268.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

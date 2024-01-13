@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkguitwo.controllers.LoginController">
+   <children>
+      <Separator layoutX="395.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="10.0" />
+      <Label layoutX="168.0" layoutY="14.0" text="Sign Up">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="575.0" layoutY="14.0" text="Log In">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="loginTagTF" layoutX="526.0" layoutY="90.0" promptText="Tag" />
+      <PasswordField fx:id="loginPasswordTF" layoutX="526.0" layoutY="155.0" promptText="Password" />
+      <Button layoutX="575.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleLogin" text="Log In" />
+      <TextField fx:id="signupTagTF" layoutX="126.0" layoutY="90.0" promptText="Tag" />
+      <PasswordField fx:id="signupPasswordTF" layoutX="126.0" layoutY="155.0" promptText="Password" />
+      <TextField fx:id="signupFirstNameTF" layoutX="126.0" layoutY="220.0" promptText="First Name" />
+      <TextField fx:id="signupLastNameTF" layoutX="126.0" layoutY="285.0" promptText="Last Name" />
+      <Button layoutX="170.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleSignup" text="Sign Up" />
+   </children>
+</AnchorPane>
