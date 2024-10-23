@@ -1,0 +1,13 @@
+int main() {
+    int a = 5;
+
+    int b;
+    cin >> b;
+
+    int c = -1;
+    if ( a > b ) {
+        c = a + b;
+    }
+
+    cout << c;
+}
