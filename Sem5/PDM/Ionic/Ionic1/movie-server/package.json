@@ -1,0 +1,22 @@
+{
+  "name": "movie-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "koa": "^2.15.3",
+    "koa-bodyparser": "^4.4.1",
+    "koa-convert": "^2.0.0",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^13.0.1",
+    "nodemon": "^3.1.7",
+    "ws": "^8.18.0"
+  }
+}
