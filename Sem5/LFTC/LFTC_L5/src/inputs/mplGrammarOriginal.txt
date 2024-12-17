@@ -1,0 +1,58 @@
+_program
+_program -> _program_start ( ) { _instruction_list }
+_program_start -> int main
+
+_instruction_list -> _instruction _instruction_list
+_instruction_list -> _instruction
+
+_instruction -> _declaration ;
+_instruction -> _struct_declaration ;
+_instruction -> _assigment ;
+_instruction -> _io ;
+_instruction -> _control
+_instruction -> _loop
+
+_declaration -> _type _identifier
+_declaration -> _type _identifier = _expression
+
+_type -> int
+_type -> float
+
+_struct_declaration -> struct _identifier { _declaration_list } _identifier
+
+_declaration_list -> _declaration _declaration_list
+_declaration_list -> _declaration
+
+_assigment -> _identifier = _expression
+
+_expression -> _expression + _expression
+_expression -> _expression - _expression
+_expression -> _expression * _expression
+_expression -> _expression / _expression
+_expression -> _expression % _expression
+_expression -> _identifier
+_expression -> _constant
+
+_io -> cout << _expression
+_io -> cin >> _identifier
+
+_control -> if ( _expression ) { _instruction_list }
+_control -> if ( _expression ) { _instruction_list } else { _instruction_list }
+
+_loop -> while ( _logical_expression ) { _instruction_list }
+
+_logical_expression -> _logical_expression _logical_operator _logical_expression
+_logical_expression -> _expression _relational_operator _expression
+
+_logical_operator -> &&
+_logical_operator -> ||
+
+_relational_operator -> ==
+_relational_operator -> !=
+_relational_operator -> <=
+_relational_operator -> >=
+_relational_operator -> <
+_relational_operator -> >
+
+_identifier -> ID
+_constant -> CONST
