@@ -1,0 +1,24 @@
+int main() {
+    int a=7.25;
+    
+    int b;
+    cin>>b;
+    b = b+2;
+    b = b/2;
+    b = -1;
+
+    int c=a-1.3;
+    if(a >b ||a==-12){
+        c =a+b;
+    }
+
+    struct S{
+        int x2x; int y;
+    }s;
+
+    cattimp (a < 20)executa
+        a = a+1;
+    sfcattimp
+
+    cout<<c;
+}
