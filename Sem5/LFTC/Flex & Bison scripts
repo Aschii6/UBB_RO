@@ -1,0 +1,15 @@
+flex spec.l
+gcc lex.yy.c -o lex.exe
+./lex.exe test.dan tokens.txt
+
+flex -+ spec.l
+g++ lex.yy.cc -o lex.exe
+./lex.exe test.dan tokens.txt
+
+bison -d spec.y
+bison -d -v spec.y
+flex spec.l
+gcc lex.yy.c spec.tab.c -o parser.exe
+gcc -DYYDEBUG=1 lex.yy.c spec.tab.c -o parser.exe
+
+./parser.exe < test.dan
