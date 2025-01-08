@@ -1,0 +1,72 @@
+18 Jun 2024 17:58:40,210 INFO  persistence.jdbc.PlayerJdbcRepository 23 <init> - Initialising PlayerJdbcRepository
+18 Jun 2024 17:58:40,219 INFO  persistence.jdbc.GameJdbcRepository 31 <init> - Initialising GameJdbcRepository
+18 Jun 2024 17:58:49,478 TRACE persistence.jdbc.PlayerJdbcRepository 79 login - Enter login with player Player{alias='Ion', id=null}
+18 Jun 2024 17:58:49,478 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+18 Jun 2024 17:58:49,478 TRACE persistence.jdbc.JdbcUtils 21 getNewConnection - Enter
+18 Jun 2024 17:58:49,478 INFO  persistence.jdbc.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Users\Daniel\SQLite\clues.db
+18 Jun 2024 17:58:49,479 INFO  persistence.jdbc.JdbcUtils 28 getNewConnection - user: null
+18 Jun 2024 17:58:49,479 INFO  persistence.jdbc.JdbcUtils 29 getNewConnection - pass: null
+18 Jun 2024 17:58:49,605 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7672451f)
+18 Jun 2024 17:58:49,610 TRACE persistence.jdbc.PlayerJdbcRepository 95 login - Exit with(found player)
+18 Jun 2024 17:58:49,723 TRACE persistence.hibernate.ConfigurationOrmRepository 60 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 17:58:49,741 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 17:58:49,953 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 17:58:51,555 TRACE persistence.jdbc.GameJdbcRepository 42 findAll - Enter findAll
+18 Jun 2024 17:58:51,555 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+18 Jun 2024 17:58:51,556 TRACE persistence.jdbc.JdbcUtils 21 getNewConnection - Enter
+18 Jun 2024 17:58:51,556 INFO  persistence.jdbc.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Users\Daniel\SQLite\clues.db
+18 Jun 2024 17:58:51,556 INFO  persistence.jdbc.JdbcUtils 28 getNewConnection - user: null
+18 Jun 2024 17:58:51,556 INFO  persistence.jdbc.JdbcUtils 29 getNewConnection - pass: null
+18 Jun 2024 17:58:51,557 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5b5d5086)
+18 Jun 2024 17:58:51,597 TRACE persistence.jdbc.GameJdbcRepository 74 findAll - Exit findAll found 9 values
+18 Jun 2024 17:58:54,207 TRACE persistence.jdbc.PlayerJdbcRepository 79 login - Enter login with player Player{alias='Ioana', id=null}
+18 Jun 2024 17:58:54,207 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+18 Jun 2024 17:58:54,208 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7672451f)
+18 Jun 2024 17:58:54,208 TRACE persistence.jdbc.PlayerJdbcRepository 95 login - Exit with(found player)
+18 Jun 2024 17:58:54,316 TRACE persistence.hibernate.ConfigurationOrmRepository 60 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 17:58:54,419 TRACE persistence.jdbc.GameJdbcRepository 42 findAll - Enter findAll
+18 Jun 2024 17:58:54,419 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+18 Jun 2024 17:58:54,419 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5b5d5086)
+18 Jun 2024 17:58:54,428 TRACE persistence.jdbc.GameJdbcRepository 74 findAll - Exit findAll found 9 values
+18 Jun 2024 17:59:03,849 TRACE persistence.jdbc.GameJdbcRepository 80 save - Enter save with value Game{player=Player{alias='Ioana', id=3}, configuration=Configuration{id=3, row=2, column=1, clue='The red box'}, guesses=[Guess{row=3, column=0}, Guess{row=2, column=0}, Guess{row=1, column=0}, Guess{row=0, column=0}], noOfTries=10, startTime=2024-06-18T17:58:54}
+18 Jun 2024 17:59:03,850 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+18 Jun 2024 17:59:03,850 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5b5d5086)
+18 Jun 2024 17:59:03,867 TRACE persistence.jdbc.GameJdbcRepository 120 save - Exit with(save successful)
+18 Jun 2024 17:59:03,868 TRACE persistence.jdbc.GameJdbcRepository 42 findAll - Enter findAll
+18 Jun 2024 17:59:03,869 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+18 Jun 2024 17:59:03,869 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5b5d5086)
+18 Jun 2024 17:59:03,876 TRACE persistence.jdbc.GameJdbcRepository 74 findAll - Exit findAll found 10 values
+18 Jun 2024 17:59:03,970 TRACE persistence.jdbc.GameJdbcRepository 42 findAll - Enter findAll
+18 Jun 2024 17:59:03,970 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+18 Jun 2024 17:59:03,970 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5b5d5086)
+18 Jun 2024 17:59:03,978 TRACE persistence.jdbc.GameJdbcRepository 74 findAll - Exit findAll found 10 values
+19 Jun 2024 15:39:11,469 INFO  persistence.jdbc.PlayerJdbcRepository 23 <init> - Initialising PlayerJdbcRepository
+19 Jun 2024 15:39:11,478 INFO  persistence.jdbc.GameJdbcRepository 31 <init> - Initialising GameJdbcRepository
+19 Jun 2024 15:39:22,793 TRACE persistence.jdbc.PlayerJdbcRepository 79 login - Enter login with player Player{alias='Ion', id=null}
+19 Jun 2024 15:39:22,794 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+19 Jun 2024 15:39:22,794 TRACE persistence.jdbc.JdbcUtils 21 getNewConnection - Enter
+19 Jun 2024 15:39:22,794 INFO  persistence.jdbc.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Users\Daniel\SQLite\clues.db
+19 Jun 2024 15:39:22,795 INFO  persistence.jdbc.JdbcUtils 28 getNewConnection - user: null
+19 Jun 2024 15:39:22,795 INFO  persistence.jdbc.JdbcUtils 29 getNewConnection - pass: null
+19 Jun 2024 15:39:22,934 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7672451f)
+19 Jun 2024 15:39:22,939 TRACE persistence.jdbc.PlayerJdbcRepository 95 login - Exit with(found player)
+19 Jun 2024 15:39:23,058 TRACE persistence.hibernate.ConfigurationOrmRepository 60 getRandomConfiguration - Enter getRandomConfiguration
+19 Jun 2024 15:39:23,079 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+19 Jun 2024 15:39:23,348 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+19 Jun 2024 15:39:25,068 TRACE persistence.jdbc.GameJdbcRepository 42 findAll - Enter findAll
+19 Jun 2024 15:39:25,068 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+19 Jun 2024 15:39:25,068 TRACE persistence.jdbc.JdbcUtils 21 getNewConnection - Enter
+19 Jun 2024 15:39:25,069 INFO  persistence.jdbc.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Users\Daniel\SQLite\clues.db
+19 Jun 2024 15:39:25,069 INFO  persistence.jdbc.JdbcUtils 28 getNewConnection - user: null
+19 Jun 2024 15:39:25,069 INFO  persistence.jdbc.JdbcUtils 29 getNewConnection - pass: null
+19 Jun 2024 15:39:25,070 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1bca820a)
+19 Jun 2024 15:39:25,114 TRACE persistence.jdbc.GameJdbcRepository 74 findAll - Exit findAll found 10 values
+19 Jun 2024 15:39:29,458 TRACE persistence.jdbc.PlayerJdbcRepository 79 login - Enter login with player Player{alias='Ioana', id=null}
+19 Jun 2024 15:39:29,459 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+19 Jun 2024 15:39:29,459 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7672451f)
+19 Jun 2024 15:39:29,459 TRACE persistence.jdbc.PlayerJdbcRepository 95 login - Exit with(found player)
+19 Jun 2024 15:39:29,568 TRACE persistence.hibernate.ConfigurationOrmRepository 60 getRandomConfiguration - Enter getRandomConfiguration
+19 Jun 2024 15:39:29,678 TRACE persistence.jdbc.GameJdbcRepository 42 findAll - Enter findAll
+19 Jun 2024 15:39:29,678 TRACE persistence.jdbc.JdbcUtils 45 getConnection - Enter
+19 Jun 2024 15:39:29,679 TRACE persistence.jdbc.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1bca820a)
+19 Jun 2024 15:39:29,688 TRACE persistence.jdbc.GameJdbcRepository 74 findAll - Exit findAll found 10 values
