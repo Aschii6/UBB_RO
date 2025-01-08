@@ -1,0 +1,46 @@
+18 Jun 2024 20:39:28,553 TRACE persistence.hibernate.PlayerHibernateRepository 48 login - Enter login player Player{id=null, alias='Ion'}
+18 Jun 2024 20:39:28,570 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 20:39:28,799 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 20:39:30,544 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:39:37,857 TRACE persistence.hibernate.PlayerHibernateRepository 48 login - Enter login player Player{id=null, alias='Ioana'}
+18 Jun 2024 20:39:37,970 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:39:47,357 TRACE persistence.hibernate.PlayerHibernateRepository 48 login - Enter login player Player{id=null, alias='Mihai'}
+18 Jun 2024 20:39:47,470 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:26,613 TRACE persistence.hibernate.PlayerHibernateRepository 48 login - Enter login player Player{id=null, alias='Ion'}
+18 Jun 2024 20:40:26,630 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 20:40:26,856 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 20:40:28,612 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:31,099 TRACE persistence.hibernate.PlayerHibernateRepository 48 login - Enter login player Player{id=null, alias='Ioana'}
+18 Jun 2024 20:40:31,212 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:34,314 TRACE persistence.hibernate.PlayerHibernateRepository 48 login - Enter login player Player{id=null, alias='Mihai'}
+18 Jun 2024 20:40:34,427 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:40,615 TRACE persistence.hibernate.GameHibernateRepository 33 save - Enter save game Game{id=null, player=Player{id=1, alias='Ion'}, points=1, duration=12, potholes=[Position{row=0, col=1}, Position{row=1, col=2}, Position{row=2, col=2}, Position{row=3, col=3}, Position{row=2, col=1}], positions=[Position{row=0, col=0}, Position{row=1, col=2}]}
+18 Jun 2024 20:40:40,663 TRACE persistence.hibernate.GameHibernateRepository 40 save - Exit saved game Game{id=1, player=Player{id=1, alias='Ion'}, points=1, duration=12, potholes=[Position{row=0, col=1}, Position{row=1, col=2}, Position{row=2, col=2}, Position{row=3, col=3}, Position{row=2, col=1}], positions=[Position{row=0, col=0}, Position{row=1, col=2}]}
+18 Jun 2024 20:40:40,664 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:40,664 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:40,771 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:44,042 TRACE persistence.hibernate.GameHibernateRepository 33 save - Enter save game Game{id=null, player=Player{id=2, alias='Ioana'}, points=3, duration=13, potholes=[Position{row=0, col=3}, Position{row=1, col=3}, Position{row=2, col=1}, Position{row=3, col=1}, Position{row=0, col=2}], positions=[Position{row=0, col=1}, Position{row=1, col=2}, Position{row=2, col=1}]}
+18 Jun 2024 20:40:44,059 TRACE persistence.hibernate.GameHibernateRepository 40 save - Exit saved game Game{id=2, player=Player{id=2, alias='Ioana'}, points=3, duration=13, potholes=[Position{row=0, col=3}, Position{row=1, col=3}, Position{row=2, col=1}, Position{row=3, col=1}, Position{row=0, col=2}], positions=[Position{row=0, col=1}, Position{row=1, col=2}, Position{row=2, col=1}]}
+18 Jun 2024 20:40:44,061 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:44,061 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:44,169 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:47,899 TRACE persistence.hibernate.GameHibernateRepository 33 save - Enter save game Game{id=null, player=Player{id=3, alias='Mihai'}, points=0, duration=13, potholes=[Position{row=0, col=3}, Position{row=1, col=1}, Position{row=2, col=2}, Position{row=3, col=1}, Position{row=1, col=3}], positions=[Position{row=0, col=3}]}
+18 Jun 2024 20:40:47,905 TRACE persistence.hibernate.GameHibernateRepository 40 save - Exit saved game Game{id=3, player=Player{id=3, alias='Mihai'}, points=0, duration=13, potholes=[Position{row=0, col=3}, Position{row=1, col=1}, Position{row=2, col=2}, Position{row=3, col=1}, Position{row=1, col=3}], positions=[Position{row=0, col=3}]}
+18 Jun 2024 20:40:47,906 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:47,906 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:40:48,008 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:41:05,987 TRACE persistence.hibernate.PlayerHibernateRepository 48 login - Enter login player Player{id=null, alias='Ion'}
+18 Jun 2024 20:41:06,097 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:41:08,988 TRACE persistence.hibernate.PlayerHibernateRepository 48 login - Enter login player Player{id=null, alias='Ioana'}
+18 Jun 2024 20:41:09,094 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:41:12,724 TRACE persistence.hibernate.GameHibernateRepository 33 save - Enter save game Game{id=null, player=Player{id=1, alias='Ion'}, points=10, duration=6, potholes=[Position{row=0, col=0}, Position{row=1, col=3}, Position{row=2, col=3}, Position{row=3, col=0}, Position{row=1, col=1}], positions=[Position{row=0, col=1}, Position{row=1, col=2}, Position{row=2, col=1}, Position{row=3, col=3}]}
+18 Jun 2024 20:41:12,748 TRACE persistence.hibernate.GameHibernateRepository 40 save - Exit saved game Game{id=4, player=Player{id=1, alias='Ion'}, points=10, duration=6, potholes=[Position{row=0, col=0}, Position{row=1, col=3}, Position{row=2, col=3}, Position{row=3, col=0}, Position{row=1, col=1}], positions=[Position{row=0, col=1}, Position{row=1, col=2}, Position{row=2, col=1}, Position{row=3, col=3}]}
+18 Jun 2024 20:41:12,749 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+18 Jun 2024 20:41:12,860 TRACE persistence.hibernate.GameHibernateRepository 21 findAll - Enter findAll games
+19 Jun 2024 15:47:52,472 TRACE persistence.hibernate.PlayerHibernateRepository 59 login - Enter login player Player{id=null, alias='Ion'}
+19 Jun 2024 15:47:52,502 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+19 Jun 2024 15:47:52,735 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+19 Jun 2024 15:47:54,554 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+19 Jun 2024 15:47:57,326 TRACE persistence.hibernate.GameHibernateRepository 43 save - Enter save game Game{id=null, player=Player{id=1, alias='Ion'}, points=0, duration=3, potholes=[Position{row=0, col=2}, Position{row=1, col=3}, Position{row=2, col=1}, Position{row=3, col=1}, Position{row=0, col=0}], positions=[Position{row=0, col=0}]}
+19 Jun 2024 15:47:57,366 TRACE persistence.hibernate.GameHibernateRepository 50 save - Exit saved game Game{id=6, player=Player{id=1, alias='Ion'}, points=0, duration=3, potholes=[Position{row=0, col=2}, Position{row=1, col=3}, Position{row=2, col=1}, Position{row=3, col=1}, Position{row=0, col=0}], positions=[Position{row=0, col=0}]}
+19 Jun 2024 15:47:57,467 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games

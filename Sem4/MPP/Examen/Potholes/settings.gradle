@@ -1,0 +1,9 @@
+rootProject.name = 'Potholes'
+include 'Model'
+include 'Persistence'
+include 'Rest'
+include 'Services'
+include 'Server'
+include 'Networking'
+include 'Client'
+

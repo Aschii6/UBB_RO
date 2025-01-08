@@ -1,0 +1,82 @@
+18 Jun 2024 00:08:30,655 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:08:30,673 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 00:08:30,898 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 00:08:32,683 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 00:09:49,322 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:09:49,440 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 00:10:25,515 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:10:25,628 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 00:14:41,234 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:14:45,913 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 00:15:21,183 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:15:25,618 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:15:28,058 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 00:16:48,710 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:16:48,727 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 00:16:48,952 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 00:16:50,709 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 00:17:26,305 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:17:26,418 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 00:18:53,699 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 00:18:53,716 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 00:18:53,951 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 00:18:55,741 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:09:06,292 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:09:06,315 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 12:09:06,605 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 12:09:12,526 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:15:34,784 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:15:34,801 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 12:15:35,030 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 12:15:36,775 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:26:57,205 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:26:57,221 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 12:26:57,442 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 12:26:59,216 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:29:29,326 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:29:29,343 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 12:29:29,576 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 12:29:31,341 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:30:09,467 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:30:09,581 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:33:19,834 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:33:19,950 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:42:34,582 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:42:34,599 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 12:42:34,830 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 12:42:36,585 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:43:09,892 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:43:10,008 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:55:07,516 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:55:07,534 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 12:55:07,768 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 12:55:09,604 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:55:09,759 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 12:55:11,922 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:55:12,032 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:55:12,150 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 12:55:15,634 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 12:55:15,751 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 12:55:15,861 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 12:55:31,187 TRACE persistence.hibernate.GameHibernateRepository 43 save - Enter save game Entity{id=null}
+18 Jun 2024 12:55:31,241 TRACE persistence.hibernate.GameHibernateRepository 47 save - saved game Entity{id=null}
+18 Jun 2024 12:55:31,243 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 12:55:31,243 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 12:55:31,347 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 12:55:48,010 TRACE persistence.hibernate.GameHibernateRepository 43 save - Enter save game Entity{id=null}
+18 Jun 2024 12:55:48,027 TRACE persistence.hibernate.GameHibernateRepository 47 save - saved game Entity{id=null}
+18 Jun 2024 12:55:48,028 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 12:55:48,028 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 12:55:48,134 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+18 Jun 2024 13:57:53,279 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Entity{id=null}
+18 Jun 2024 13:57:53,305 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 13:57:53,576 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 13:57:55,332 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+18 Jun 2024 13:57:55,488 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+19 Jun 2024 15:48:21,705 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Player{id=null, alias='Ion'}
+19 Jun 2024 15:48:21,724 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+19 Jun 2024 15:48:21,957 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+19 Jun 2024 15:48:23,780 TRACE persistence.hibernate.ConfigurationHibernateRepository 75 getRandomConfiguration - Enter getRandomConfiguration
+19 Jun 2024 15:48:23,936 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games
+19 Jun 2024 15:49:16,552 TRACE persistence.hibernate.PlayerHibernateRepository 41 login - Enter login player Player{id=null, alias='Ion'}
+19 Jun 2024 15:49:16,660 TRACE persistence.hibernate.GameHibernateRepository 31 findAll - Enter findAll games

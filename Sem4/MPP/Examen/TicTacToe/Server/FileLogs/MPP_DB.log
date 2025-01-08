@@ -1,0 +1,47 @@
+18 Jun 2024 17:13:48,241 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:13:48,259 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 17:13:48,486 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 17:13:53,858 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:14:59,405 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:15:05,918 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:15:18,335 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:15:18,352 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 17:15:18,585 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 17:15:20,418 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:15:22,135 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:15:22,248 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:15:35,283 TRACE persistence.hibernate.GameHibernateRepository 35 save - Enter save Game Entity{id=null}
+18 Jun 2024 17:15:35,329 TRACE persistence.hibernate.GameHibernateRepository 39 save - saved game Entity{id=null}
+18 Jun 2024 17:15:35,331 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:15:35,441 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:15:51,542 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:15:51,657 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:01,226 TRACE persistence.hibernate.GameHibernateRepository 35 save - Enter save Game Entity{id=null}
+18 Jun 2024 17:16:01,254 TRACE persistence.hibernate.GameHibernateRepository 39 save - saved game Entity{id=null}
+18 Jun 2024 17:16:01,255 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:01,359 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:11,163 TRACE persistence.hibernate.GameHibernateRepository 35 save - Enter save Game Entity{id=null}
+18 Jun 2024 17:16:11,195 TRACE persistence.hibernate.GameHibernateRepository 39 save - saved game Entity{id=null}
+18 Jun 2024 17:16:11,196 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:11,300 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:22,866 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:16:22,983 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:30,594 TRACE persistence.hibernate.GameHibernateRepository 35 save - Enter save Game Entity{id=null}
+18 Jun 2024 17:16:30,616 TRACE persistence.hibernate.GameHibernateRepository 39 save - saved game Entity{id=null}
+18 Jun 2024 17:16:30,617 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:30,617 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:30,720 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:44,414 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Entity{id=null}
+18 Jun 2024 17:16:44,527 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:54,546 TRACE persistence.hibernate.GameHibernateRepository 35 save - Enter save Game Entity{id=null}
+18 Jun 2024 17:16:54,575 TRACE persistence.hibernate.GameHibernateRepository 39 save - saved game Entity{id=null}
+18 Jun 2024 17:16:54,576 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 17:16:54,681 TRACE persistence.hibernate.GameHibernateRepository 23 findAll - Enter findAll games
+18 Jun 2024 19:55:48,906 TRACE persistence.hibernate.PlayerHibernateRepository 50 login - Enter login player Player{id=null, alias='Ion'}
+18 Jun 2024 19:55:48,925 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+18 Jun 2024 19:55:49,156 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+18 Jun 2024 19:55:50,966 TRACE persistence.hibernate.GameHibernateRepository 32 findAll - Enter findAll games
+19 Jun 2024 15:51:08,191 TRACE persistence.hibernate.PlayerHibernateRepository 52 login - Enter login player Player{id=null, alias='Ion'}
+19 Jun 2024 15:51:08,219 DEBUG org.jboss.logging.LoggerProviders 152 logProvider - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+19 Jun 2024 15:51:08,449 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl 81 configure - HHH10001002: Using built-in connection pool (not intended for production use)
+19 Jun 2024 15:51:10,249 TRACE persistence.hibernate.GameHibernateRepository 32 findAll - Enter findAll games
