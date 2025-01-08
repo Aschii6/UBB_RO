@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.PlayerPageController">
+    <children>
+        <GridPane fx:id="gameGP" hgap="10" layoutX="14.0" layoutY="14.0" style="-fx-background-color: gray; -fx-border-width: 10px; -fx-border-color: gray" vgap="10">
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <StackPane prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+            <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <TableView fx:id="rankingsTV" layoutX="486.0" layoutY="14.0" prefHeight="334.0" prefWidth="300.0">
+            <columns>
+                <TableColumn fx:id="aliasTC" prefWidth="100.0" text="Alias" />
+                <TableColumn fx:id="pointsTC" prefWidth="100.0" text="Points" />
+                <TableColumn fx:id="durationTC" prefWidth="100.0" text="Duration" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+rootProject.name = 'Clues'
+include 'Model'
+include 'Persistence'
+include 'Rest'
+
