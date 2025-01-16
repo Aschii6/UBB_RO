@@ -1,0 +1,11 @@
+main() {
+	int a;
+	int b;
+	a = -1;
+	cin >> a;
+	cin >> b;
+	a = (a - 2) * 5;
+	b = b + 2 * 5;
+	cout << a;
+	cout << b;
+}
